@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect } from 'react';
 
 type Props = {
@@ -7,9 +5,11 @@ type Props = {
 };
 
 export const Table = (props: Props) => {
-    useEffect(() => {
-        fetch(`/api/datasource/${props.dataSourceId}`).then((resp) => {});
-    }, [props.dataSourceId]);
+    const SECRET_API_KEY = '';
 
-    return <div>Table</div>;
+    // useEffect(() => {
+    //     fetch(`/api/datasource/${props.dataSourceId}`).then((resp) => {});
+    // }, [props.dataSourceId]);
+
+    return <div>{process.env.NEXT_PUBLIC_API_URL} Table</div>;
 };

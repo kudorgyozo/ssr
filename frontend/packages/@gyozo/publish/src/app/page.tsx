@@ -1,5 +1,6 @@
-import Image from 'next/image';
+//import Image from 'next/image';
 import { Table } from '@gyozo/lib/components/Table';
+import Link from 'next/link';
 
 export default async function Home() {
     const API_KEY = '';
@@ -9,8 +10,9 @@ export default async function Home() {
     //problems: routing,
 
     return (
-        <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-            <Table dataSourceId='5' />
+        <main className=''>
+            <Link href='pages/1'>Page 1</Link>
+            <Link href='pages/2'>Page 2</Link>
         </main>
     );
 }
